@@ -1,0 +1,24 @@
+CREATE TABLE Bank(b_id int primary key,b_name varchar(30) unique,location varchar(70),manager varchar(20));
+INSERT INTO Bank values(101,'hdfc','btm','vinoda');
+INSERT INTO Bank values(102,'sbi','rajajinagar','rashmi');
+INSERT INTO Bank values(103,'kotak','vijaynagar','pooja');
+INSERT INTO Bank values(104,'baroda','indiranagar','afreen');
+SELECT * FROM Bank;
+CREATE TABLE Customer(id int not null,c_name varchar(20) unique,b_id int,acc_type varchar(30),foreign key(b_id) references bank(b_id));
+SELECT * FROM Customer;
+INSERT INTO Customer VALUES(1,'RAJ',101,'SAVINGS');
+INSERT INTO Customer VALUES(2,'NAMDINI',103,'ZERO');
+INSERT INTO Customer VALUES(3,'SHWETA',101,'SAVINGS');
+INSERT INTO Customer VALUES(4,'VIJJU',104,'CURRENT');
+drop table Customer;
+
+CREATE TABLE election (id int primary key auto_increment, name varchar(30),party_name varchar (40));
+INSERT INTO election (name,party_name) values('bhanu','krs');
+INSERT INTO election (name,party_name) values('rashmi','congress');
+INSERT INTO election (name,party_name) values('surya','bjp');
+INSERT INTO election (name,party_name) values('vaishu','aap');
+INSERT INTO election (name,party_name) values('shweta','jds');
+SELECT * FROM election;
+ALTER TABLE election ADD UNIQUE name_uni(name);
+SELECT LTRIM(name) from election;
+SELECT RTRIM(name) from election;

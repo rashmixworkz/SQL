@@ -23,6 +23,7 @@ INSERT INTO Movies_details VALUES('Yuratna','Priya','vijay','basavraj',2,current
 INSERT INTO Movies_details VALUES('Yuratna','Priya','vijay','basavraj',2,current_date(),'PunitRjkumara','Parvathy','navaranaga',7580);
 
 SELECT * FROM  Movies_details;
+SELECT * FROM Movies_details group by Movie_name;
 
 
 UPDATE movies_details SET Director='Nimala',Singer='VijayPrakasha',Producer='santhosha',Budget=87,Release_date=current_date(),Hero_name='Prajwal',Heroien_name='Neha',Theter_name='Cinimas',profit=6785 WHERE Movie_name='Milana';
@@ -56,10 +57,25 @@ INSERT INTO Movies_details VALUES('vamshi','komal','punit','sandesha',1,current_
 
 SELECT * FROM  Movies_details;
 
-SELECT *FROM snacks where  profit=7580 AND Movie_name='Rajkuma';
+SELECT *FROM snacks where  profit=6785 AND Movie_name='appu';
 SELECT *FROM snacks where  profit=7580 OR Movie_name='Rajkuma';
+SELECT *FROM snacks where  profit=7580 OR Movie_name='Rajkuma'OR Movie_name='Rajkuma';
 
+SELECT *FROM snacks where id in(1,2,3);
+SELECT *FROM snacks where id not in(1,2,3);
+SELECT * FROM snacks WHERE id between 3 and 19;
+SELECT * FROM snacks ORDER BY ID desc;
+SELECT  COUNT(*) AS no_of_rows from Movies_details;
+SELECT count(*) FROM movies;
+SELECT SUM(Hero_name) from Movies_details;
+SELECT MAX(Hero_name) from Movies_details;
+SELECT MIN(Hero_name) from Movies_details;
+SELECT AVG(Hero_name) from Movies_details; 
 
+SELECT * FROM Movies_details WHERE Heroien_name LIKE 'r%'
 
+SELECT Budget,profit, SUM(Budget) FROM Movies_details GROUP BY  Budget;
 
+SELECT COUNT(NAMES) FROM TABLE NAME GROUP BY GENDER;
+ 
 

@@ -50,3 +50,11 @@ SELECT RTRIM(roll_no) from college_Student;
 SELECT RTRIM(student_name) from college_Student;
 SELECT RTRIM(location) from college_Student;
 SELECT RTRIM(ratings) from college_Student;
+
+CREATE TABLE bank_details(id int,name varchar(20),state varchar(20));
+INSERT INTO bank_details VALUES(1,'SBI_RAJAJINAGA','KARNATAKA'),(2,'SBI_BTM','KARNATAKA'),(3,'SBI_JAYNAGAR','KARNATAKA'),(4,'SBI_KERALA','KERALA'),(5,'SBI_KER','KERALA'),(6,'SBI_AP','ANDRA'),(7,'SBI_TAMIL','TAMILNADU'),(8,'SBI_TAL','TELGU');
+SELECT * from bank_details;
+
+SELECT DISTICNCT FROM WHERE GROP BY HAVING ORDER BY  =ORDERWISE CLAUSES
+
+
